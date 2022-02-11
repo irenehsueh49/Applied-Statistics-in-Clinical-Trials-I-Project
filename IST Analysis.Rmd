@@ -46,7 +46,6 @@ ist <- read.csv("C:/Irene Hsueh's Documents/MS Applied Biostatistics/BS 851 - Ap
 
 #Descriptive Statistics
 table_html <- table1(~sex + age + factor(hemorrhagic_stroke) + factor(pulmonary_embolism) | factor(trt), data=ist, overall="Total", rowlabelhead="Treatment", caption="IST Dataset")
-table_html
 ```
 
 
