@@ -11,6 +11,7 @@ In SAS, I ran
 In R, I ran
 - mediation analysis to account for potential mediator of pulmonary embolism, adjusting for sex and age 
 ![Full Causal Chart](https://user-images.githubusercontent.com/74632124/153634405-a59c87cd-d8e2-4be4-a534-70142e952581.png)
+
 In conclusion, I found 
 1) no effect of aspirin on recurrent hemorrhagic stroke within 14 days of follow-up
 2) no effect of aspirin on recurrent hemorrhagic stroke within 14 days of follow-up, adjusting for confounders of age and sex
