@@ -42,25 +42,25 @@ data ist;
 	id=_n_;
 	
 	attrib 
-		id  					label="ID"
-		sex						label="Sex" 										format=$sex_format.
-		age						label="Age" 
-		conscious				label="Conscious State" 							format=$conscious_format.
-		infarct_vis				label="Visible Infarct" 							format=$format.
-		sbp						label="SBP"
-		face_deficit			label="Face Deficit"								format=$format.
-		arm_deficit				label="Arm/Hand Deficit"							format=$format.
-		leg_deficit				label="Leg/Foot Deficit"							format=$format.
-		dysphasia				label="Dysphasia"									format=$format.
-		hemianopia				label="Hemianopia" 									format=$format.
-		visuospatial_disorder	label="Visuospatial Disorder"						format=$format.
-		brainstem_signs			label="Brainstem/Cerebellar Signs"					format=$format.
-		initial_hemstroke 		label="Initial Hemorrhagic Stroke"					format=$format.
+		id  				label="ID"
+		sex				label="Sex" 						format=$sex_format.
+		age				label="Age" 
+		conscious			label="Conscious State" 				format=$conscious_format.
+		infarct_vis			label="Visible Infarct" 				format=$format.
+		sbp				label="SBP"
+		face_deficit			label="Face Deficit"					format=$format.
+		arm_deficit			label="Arm/Hand Deficit"				format=$format.
+		leg_deficit			label="Leg/Foot Deficit"				format=$format.
+		dysphasia			label="Dysphasia"					format=$format.
+		hemianopia			label="Hemianopia" 					format=$format.
+		visuospatial_disorder		label="Visuospatial Disorder"				format=$format.
+		brainstem_signs			label="Brainstem/Cerebellar Signs"			format=$format.
+		initial_hemstroke 		label="Initial Hemorrhagic Stroke"			format=$format.
 		ischaemic_stroke		label="Recurrent Ischaemic Stroke within 14 Days" 	format=$format.
 		hemorrhagic_stroke		label="Recurrent Hemorrgaic Stroke within 14 Days" 	format=$format.
 		other_stroke			label="Recurrent Other Stroke within 14 Days" 		format=$format.
-		stroke					label="Any Recurrent Stroke within 14 Days" 		format=$format.
-		trt						label="Treatment"									format=$trt_format.
+		stroke				label="Any Recurrent Stroke within 14 Days" 		format=$format.
+		trt				label="Treatment"					format=$trt_format.
 	;
 run;
 
