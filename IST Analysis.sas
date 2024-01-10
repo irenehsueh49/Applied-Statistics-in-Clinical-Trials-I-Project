@@ -187,7 +187,7 @@ run;
 
 
 
-*Testing for Interaction between Treatment and Initial Hemorrhagic Stroke;
+***Interaction Analysis of Treatment and Initial Hemorrhagic Stroke;
 title "Hemorrhagic Stroke Reoccurence by Initial Hemorrhagic Stroke";
 proc freq data=ist;
 	where initial_hemstroke in ("Y", "N") and hemorrhagic_stroke in ("Y", "N");
@@ -224,3 +224,5 @@ proc logistic data=ist;
 	oddsratio trt / at (initial_hemstroke=all);
 run;
 title;
+
+
