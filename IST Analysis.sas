@@ -1,5 +1,5 @@
 /************************************************************************************************/
-/*	Class		 BS 851 - Applied Statistics in Clinical Trials I			*/
+/*	Class		BS 851 - Applied Statistics in Clinical Trials I			*/
 /*	Program Name	IST Analysis.sas							*/
 /*	Location	/home/u63444480/MS Applied Biostatistics/				*/
 /*				BS 851 - Applied Statistics in Clinical Trials I/		*/
