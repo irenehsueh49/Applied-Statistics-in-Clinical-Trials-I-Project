@@ -1,14 +1,14 @@
-/****************************************************************************************/
-/*	Class		 	BS 851 - Applied Statistics in Clinical Trials I					*/
-/*	Program Name	IST Analysis.sas													*/
-/*	Location		/home/u63444480/MS Applied Biostatistics/							*/
-/*							BS 851 - Applied Statistics in Clinical Trials I/			*/
-/*							International Stroke Trial Project							*/
-/*	Author			Irene Kimura Park													*/
-/*	Date Created	April 15, 2021														*/
-/*	Description		Analysis of whether early administration of aspirin was associated 	*/
-/*						with decrease in recurrent hemorrhagic stroke within 14 days	*/
-/****************************************************************************************/
+/************************************************************************************************/
+/*	Class		 BS 851 - Applied Statistics in Clinical Trials I			*/
+/*	Program Name	IST Analysis.sas							*/
+/*	Location	/home/u63444480/MS Applied Biostatistics/				*/
+/*				BS 851 - Applied Statistics in Clinical Trials I/		*/
+/*				International Stroke Trial Project				*/
+/*	Author		Irene Kimura Park							*/
+/*	Date Created	April 15, 2021								*/
+/*	Description	Analysis of whether early administration of aspirin was associated 	*/
+/*				with decrease in recurrent hemorrhagic stroke within 14 days	*/
+/************************************************************************************************/
 
 
 *Import Dataset, Select and Rename Variables;
@@ -64,25 +64,25 @@ data ist;
 	id=_n_;
 	
 	attrib 
-		id  					label="ID"
-		sex						label="Sex" 										format=$sex_format.
-		age						label="Age" 
-		conscious				label="Conscious State" 							format=$conscious_format.
-		infarct_vis				label="Visible Infarct" 							format=$format.
-		sbp						label="SBP"
-		face_deficit			label="Face Deficit"								format=$format.
-		arm_deficit				label="Arm/Hand Deficit"							format=$format.
-		leg_deficit				label="Leg/Foot Deficit"							format=$format.
-		dysphasia				label="Dysphasia"									format=$format.
-		hemianopia				label="Hemianopia" 									format=$format.
-		visuospatial_disorder	label="Visuospatial Disorder"						format=$format.
-		brainstem_signs			label="Brainstem/Cerebellar Signs"					format=$format.
-		initial_hemstroke 		label="Initial Hemorrhagic Stroke"					format=$format.
+		id  				label="ID"
+		sex				label="Sex" 						format=$sex_format.
+		age				label="Age" 
+		conscious			label="Conscious State" 				format=$conscious_format.
+		infarct_vis			label="Visible Infarct" 				format=$format.
+		sbp				label="SBP"
+		face_deficit			label="Face Deficit"					format=$format.
+		arm_deficit			label="Arm/Hand Deficit"				format=$format.
+		leg_deficit			label="Leg/Foot Deficit"				format=$format.
+		dysphasia			label="Dysphasia"					format=$format.
+		hemianopia			label="Hemianopia" 					format=$format.
+		visuospatial_disorder		label="Visuospatial Disorder"				format=$format.
+		brainstem_signs			label="Brainstem/Cerebellar Signs"			format=$format.
+		initial_hemstroke 		label="Initial Hemorrhagic Stroke"			format=$format.
 		ischaemic_stroke		label="Recurrent Ischaemic Stroke within 14 Days" 	format=$format.
 		hemorrhagic_stroke		label="Recurrent Hemorrgaic Stroke within 14 Days" 	format=$format.
 		other_stroke			label="Recurrent Other Stroke within 14 Days" 		format=$format.
-		stroke					label="Any Recurrent Stroke within 14 Days" 		format=$format.
-		trt						label="Treatment"									format=$trt_format.
+		stroke				label="Any Recurrent Stroke within 14 Days" 		format=$format.
+		trt				label="Treatment"					format=$trt_format.
 	;
 run;
 
@@ -147,6 +147,8 @@ title;
 
 
 
+
+
 ***Inverse Probability Weighing;
 *Step 1: Calculate probability of treatment assignment from on baseline covariates;
 proc logistic data=ist plots(maxpoints=none);
@@ -178,6 +180,8 @@ proc genmod data=estimated_trt_prob;
 	repeated subject=id / type=ind;
 	estimate "Odds Ratio" trt 1 / exp;
 run;
+
+
 
 
 
