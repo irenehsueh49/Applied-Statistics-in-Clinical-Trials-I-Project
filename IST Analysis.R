@@ -1,6 +1,6 @@
 ---
 title: "IST Analysis"
-author: "Irene Hsueh"
+author: "Irene Kimura Park"
 date: ''
 output:
   pdf_document: default
@@ -18,7 +18,7 @@ library(mediation)
 ### IST Dataset
 ```{r}
 #Reading in Dataset
-ist <- read.csv("C:/Irene Hsueh's Documents/MS Applied Biostatistics/BS 851 - Applied Statistics in Clinical Trials I/Project/IST.csv") %>%
+ist <- read.csv("C:/Irene Park's Documents/Academics/MS Applied Biostatistics/BS 851 - Applied Statistics in Clinical Trials I/Project/IST.csv") %>%
 #Selecting Variables for Analysis
   dplyr::select(sex = SEX, 
                 age = AGE, 
@@ -48,7 +48,7 @@ ist <- read.csv("C:/Irene Hsueh's Documents/MS Applied Biostatistics/BS 851 - Ap
                pulmonary_embolism = "Pulmonary Embolism")
 
 #Descriptive Statistics
-table_html <- table1(~sex + age + factor(hemorrhagic_stroke) + factor(pulmonary_embolism) | factor(trt), data=ist, overall="Total", rowlabelhead="Treatment", caption="IST Dataset")
+table_html <- table1(~sex + age + factor(hemorrhagic_stroke) +factor(pulmonary_embolism) | factor(trt), data=ist, overall="Total", rowlabelhead="Treatment", caption="IST Dataset")
 ```
 
 
@@ -70,6 +70,3 @@ set.seed(1234)
 mediated_effects <- mediate(mediator_model, outcome_model, treat="trt", mediator="pulmonary_embolism")
 summary(mediated_effects)
 ```
-
-
-
