@@ -5,7 +5,7 @@
 /*				BS 851 - Applied Statistics in Clinical Trials I/		*/
 /*				International Stroke Trial Project				*/
 /*	Author		Irene Kimura Park							*/
-/*	Date Created	April 15, 2021								*/
+/*	Date Created	January 10, 2024							*/
 /*	Description	Analysis of whether early administration of aspirin was associated 	*/
 /*				with decrease in recurrent hemorrhagic stroke within 14 days	*/
 /************************************************************************************************/
