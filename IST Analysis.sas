@@ -51,10 +51,21 @@ run;
 
 *Subset of Subjects who Received Treatment;
 proc format;
-	value $sex_format "M"="Male" "F"="Female";
-	value $conscious_format "F"="Alert" "D"="Drowsy" "U"="Unconscious";
-	value $format "Y"="Yes" "N"="No" "C"="Can't Assess" "U"="Unknown";
-	value $trt_format "Y"="Aspirin" "N"="Placebo";
+	value $sex_format 
+ 		"M"="Male" 
+   		"F"="Female";
+	value $conscious_format 
+ 		"F"="Alert" 
+   		"D"="Drowsy" 
+     		"U"="Unconscious";
+	value $format 
+ 		"Y"="Yes" 
+   		"N"="No" 
+     		"C"="Can't Assess" 
+       		"U"="Unknown";
+	value $trt_format 
+ 		"Y"="Aspirin" 
+   		"N"="Placebo";
 run;
 
 data ist;
